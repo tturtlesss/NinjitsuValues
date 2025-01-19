@@ -1,4 +1,4 @@
-/* Global Styles */
+/* style.css - Part 1: Global Styles, Header, and Dropdowns */
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +17,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    user-select: none; /* Disables text selection globally */
+    user-select: none;
 }
 
 a {
@@ -27,22 +27,22 @@ a {
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-    width: 12px;  /* Set the width of the scrollbar */
+    width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #333;  /* Color of the track */
+    background: #333;
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #888;  /* Color of the thumb */
+    background-color: #888;
     border-radius: 10px;
-    border: 3px solid #333;  /* Adds some border around the thumb */
+    border: 3px solid #333;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #555;  /* Hover color */
+    background-color: #555;
 }
 
 /* Header Styles */
@@ -138,7 +138,7 @@ a {
     position: absolute;
     background-color: #282a29;
     min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     border-radius: 5px;
     top: 100%;
@@ -170,15 +170,14 @@ a {
 .sort-dropdown-content a:hover, .info-dropdown-content a:hover {
     background-color: #333534;
 }
-
-/* Cards */
+/* style.css - Part 2: Cards and Container, Tabs */
 .container {
-    padding-top: 80px;
+    padding-top: 20px; /* Reduced top padding */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 0 auto; /* Removed top margin */
     padding: 0 20px;
 }
 
@@ -242,16 +241,14 @@ a {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    -webkit-user-drag: none;  /* Disable image drag */
+    -webkit-user-drag: none;
 }
 
 .card-details {
     text-align: left;
     display: flex;
-    flex-direction: column;
-    margin-top: auto;
-}
-
+    flex-direction: column
+/* style.css - Part 3: Footer and Responsive Design */
 .detail-container {
     margin-bottom: 5px;
 }
@@ -276,13 +273,13 @@ a {
     padding: 20px 40px;
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Ensures vertical alignment in the middle */
+    align-items: center;
     border-radius: 12px 12px 0 0;
     margin-top: auto;
     width: 100%;
 }
 
-.footer-container {
+.footer-content {
     max-width: 1200px;
     width: 100%;
     display: flex;
@@ -293,7 +290,7 @@ a {
 .footer-left, .footer-middle, .footer-right {
     flex: 1;
     margin: 10px;
-    text-align: left; /* Aligns text content to the left */
+    text-align: left;
 }
 
 .footer-logo {
@@ -365,13 +362,14 @@ a {
         width: 90%;
     }
 
-    .footer-container {
+    .footer-content {
         flex-direction: column;
-        text-align: left; /* Ensures left alignment on smaller screens */
+        text-align: left;
     }
 
     .footer-left, .footer-middle, .footer-right {
         margin: 10px 0;
+        text-align: center; /* Center footer content on smaller screens */
     }
 
     .card {
@@ -392,7 +390,7 @@ a {
 
 /* Button Styles */
 .button, .back-button {
-    background-color: #282a29; /* Green */
+    background-color: #282a29;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -403,12 +401,14 @@ a {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    transition: background-color 0.3s ease;
 }
 
 .button:hover, .back-button:hover {
-    background-color: #333534; /* Darker green on hover */
+    background-color: #333534;
 }
+
+/* style.css - Part 4: FAQ, Guide, and Credits Styles */
 
 /* FAQ Styles */
 .faq-container {
@@ -496,7 +496,9 @@ a {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-.guide-container h1, .guide-container h2, .guide-container h3 {
+.guide-container h1,
+.guide-container h2,
+.guide-container h3 {
     color: #eee;
 }
 
@@ -506,7 +508,8 @@ a {
     border-bottom: 1px solid #eee;
 }
 
-.guide-container p, .guide-container li {
+.guide-container p,
+.guide-container li {
     line-height: 1.6;
     margin-bottom: 10px;
     color: #eee;
@@ -528,35 +531,36 @@ a {
 
 /* Credits Styles */
 .credits-container {
-    max-width: 1200px; /* Increased width for 4 columns */
+    max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
     background-color: #1a1c1b;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    display: flex; /* Use flexbox for layout */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    justify-content: space-around; /* Distribute items evenly */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .credits-card {
-    width: calc(25% - 20px); /* 4 columns with spacing */
+    width: calc(25% - 20px);
     margin: 10px;
-    background-color: #1f2120; /* Darker background for cards */
+    background-color: #1f2120;
     border-radius: 8px;
     padding: 15px;
-    text-align: center; /* Center content within cards */
+    text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     color: #eee;
 }
-.credits-card img{
+
+.credits-card img {
     width: 100%;
     border-radius: 8px;
     margin-bottom: 10px;
 }
 
 .credits-card h2 {
-    margin-bottom: 5px; /* Reduced margin */
+    margin-bottom: 5px;
     font-size: 1.2em;
 }
 
@@ -564,21 +568,25 @@ a {
     margin-bottom: 5px;
     font-size: 0.9em;
 }
-.credits-card a{
+
+.credits-card a {
     display: block;
     margin: 5px auto;
     color: rgb(100, 149, 237);
 }
-.credits-card a:hover{
+
+.credits-card a:hover {
     color: rgb(70, 130, 180);
 }
-@media (max-width: 900px){
-    .credits-card{
+
+@media (max-width: 900px) {
+    .credits-card {
         width: calc(50% - 20px);
     }
 }
-@media (max-width: 600px){
-    .credits-card{
+
+@media (max-width: 600px) {
+    .credits-card {
         width: 90%;
     }
 }
