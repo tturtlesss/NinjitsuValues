@@ -3,82 +3,6 @@
 <head>
     <title>FAQ</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .faq-container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #1a1c1b;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-        }
-
-        .faq-container h1 {
-            color: #eee;
-            margin-bottom: 30px;
-            position: relative;
-            display: inline-block;
-            padding-bottom: 5px;
-        }
-
-        .faq-container h1::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 50%;
-            height: 2px;
-            background-color: #eee;
-        }
-
-        .faq-section {
-            margin-bottom: 20px;
-            border: 1px solid #333;
-            border-radius: 8px;
-            padding: 15px;
-            background-color: #1a1c1b;
-            overflow: hidden;
-            transition: height 0.3s ease, padding 0.3s ease;
-        }
-
-        .faq-section h2 {
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #eee;
-            transition: transform 0.3s ease;
-            user-select: none;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-        }
-
-        .faq-section .content {
-            padding-left: 20px;
-            color: #eee;
-            opacity: 0;
-            transform: translateY(-10px);
-            transition: opacity 0.3s ease, transform 0.3s ease;
-        }
-
-        .faq-section.active .content {
-            opacity: 1;
-            transform: translateY(0);
-            padding-bottom: 10px;
-        }
-
-        .faq-section h2::after {
-            content: "+";
-            font-size: 1.5em;
-            transition: transform 0.3s ease;
-        }
-
-        .faq-section.active h2::after {
-            content: "-";
-            transform: rotate(180deg);
-        }
-    </style>
 </head>
 <body>
     <header class="site-header">
@@ -89,7 +13,7 @@
                 </div>
             </div>
             <div class="header-right">
-                <a href="index.html" class="back-button">Back</a>
+                <a href="index.html" class="button back-button">Back</a>
             </div>
         </div>
     </header>
