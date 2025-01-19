@@ -390,8 +390,8 @@ a {
     }
 }
 
-/* Button Styles (added) */
-.button {
+/* Button Styles */
+.button, .back-button {
     background-color: #4CAF50; /* Green */
     border: none;
     color: white;
@@ -406,10 +406,179 @@ a {
     transition: background-color 0.3s ease; /* Smooth transition on hover */
 }
 
-.button:hover {
+.button:hover, .back-button:hover {
     background-color: #3e8e41; /* Darker green on hover */
 }
 
-.back-button {
-  /* Inherits styles from .button */
+/* FAQ Styles */
+.faq-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1a1c1b;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.faq-container h1 {
+    color: #eee;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.faq-container h1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    height: 2px;
+    background-color: #eee;
+}
+
+.faq-section {
+    margin-bottom: 20px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #1a1c1b;
+    overflow: hidden;
+    transition: height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-section h2 {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #eee;
+    transition: transform 0.3s ease;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.faq-section .content {
+    padding-left: 20px;
+    color: #eee;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.faq-section.active .content {
+    opacity: 1;
+    transform: translateY(0);
+    padding-bottom: 10px;
+}
+
+.faq-section h2::after {
+    content: "+";
+    font-size: 1.5em;
+    transition: transform 0.3s ease;
+}
+
+.faq-section.active h2::after {
+    content: "-";
+    transform: rotate(180deg);
+}
+
+/* Guide Styles */
+.guide-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1a1c1b;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.guide-container h1, .guide-container h2, .guide-container h3 {
+    color: #eee;
+}
+
+.guide-container h2 {
+    margin-top: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+.guide-container p, .guide-container li {
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #eee;
+}
+
+.guide-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.guide-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Credits Styles */
+.credits-container {
+    max-width: 1200px; /* Increased width for 4 columns */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1a1c1b;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: space-around; /* Distribute items evenly */
+}
+
+.credits-card {
+    width: calc(25% - 20px); /* 4 columns with spacing */
+    margin: 10px;
+    background-color: #1f2120; /* Darker background for cards */
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center; /* Center content within cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    color: #eee;
+}
+.credits-card img{
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.credits-card h2 {
+    margin-bottom: 5px; /* Reduced margin */
+    font-size: 1.2em;
+}
+
+.credits-card p {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+.credits-card a{
+    display: block;
+    margin: 5px auto;
+    color: rgb(100, 149, 237);
+}
+.credits-card a:hover{
+    color: rgb(70, 130, 180);
+}
+@media (max-width: 900px){
+    .credits-card{
+        width: calc(50% - 20px);
+    }
+}
+@media (max-width: 600px){
+    .credits-card{
+        width: 90%;
+    }
 }
