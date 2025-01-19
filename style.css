@@ -4,9 +4,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
 }
+
 body {
     background-color: #131514;
     color: #fff;
@@ -386,4 +388,28 @@ a {
         width: 25px;
         height: 25px;
     }
+}
+
+/* Button Styles (added) */
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.button:hover {
+    background-color: #3e8e41; /* Darker green on hover */
+}
+
+.back-button {
+  /* Inherits styles from .button */
 }
