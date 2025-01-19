@@ -171,6 +171,32 @@ a {
     background-color: #333534;
 }
 
+/* Tab Styles */
+.tab-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.tab-button {
+    background-color: #282a29;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tab-button:hover {
+    background-color: #333534;
+}
+
+.tab-button.active {
+    background-color: #444545;
+}
+
 /* Cards */
 .container {
     padding-top: 80px;
@@ -328,6 +354,7 @@ a {
     font-size: 14px;
 }
 
+/* Footer continued */
 .footer-right ul li a:hover {
     color: #fff;
 }
@@ -549,7 +576,8 @@ a {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     color: #eee;
 }
-.credits-card img{
+
+.credits-card img {
     width: 100%;
     border-radius: 8px;
     margin-bottom: 10px;
@@ -564,21 +592,25 @@ a {
     margin-bottom: 5px;
     font-size: 0.9em;
 }
-.credits-card a{
+
+.credits-card a {
     display: block;
     margin: 5px auto;
     color: rgb(100, 149, 237);
 }
-.credits-card a:hover{
+
+.credits-card a:hover {
     color: rgb(70, 130, 180);
 }
-@media (max-width: 900px){
-    .credits-card{
+
+@media (max-width: 900px) {
+    .credits-card {
         width: calc(50% - 20px);
     }
 }
-@media (max-width: 600px){
-    .credits-card{
+
+@media (max-width: 600px) {
+    .credits-card {
         width: 90%;
     }
 }
