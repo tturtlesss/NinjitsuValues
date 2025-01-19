@@ -44,6 +44,11 @@
     </header>
 
     <!-- Main Content -->
+    <div class="tab-container">
+        <button class="tab-button" data-category="scrolls">Scrolls</button>
+        <button class="tab-button" data-category="accessories">Accessories</button>
+        <button class="tab-button" data-category="weapons">Weapons</button>
+    </div>
     <div class="container" id="cardContainer"></div>
 
     <!-- Footer -->
@@ -76,20 +81,25 @@
     <!-- JavaScript -->
     <script>
         const cardsData = [
-            { title: "Yang", status: "Mythical", image: "images/Yang.png", value: 9000000, demand: 10 },
-            { title: "Wind", status: "Legendary", image: "images/Wind.png", value: 6500000, demand: 8.3 },
-            { title: "Samurai Mech", status: "Legendary", image: "images/Samurai Mech.png", value: 7000000, demand: 9.5 },
-            { title: "Green", status: "Legendary", image: "images/Green.png", value: 5000000, demand: 8 },
-            { title: "White Wolf", status: "Epic", image: "images/WhiteWolf.png", value: 3000000, demand: 7.8 },
-            { title: "Fire", status: "Epic", image: "images/Fire.png", value: 1000000, demand: 6.5 },
-            { title: "Lightning", status: "Epic", image: "images/Lightning.png", value: 950000, demand: 7 },
-            { title: "Ice", status: "Epic", image: "images/Ice.png", value: 850000, demand: 5.3 },
-            { title: "Earth", status: "Epic", image: "images/Earth.png", value: 700000, demand: 4 },
-            { title: "Hypnofang", status: "Rare", image: "images/HypnoFang.png", value: 100000, demand: 4.4 },
-            { title: "Acidfang", status: "Rare", image: "images/AcidFang.png", value: 10000, demand: 2 },
-            { title: "Strength", status: "Common", image: "images/Strength.png", value: 5000, demand: 1 },
-            { title: "Brown", status: "Epic", image: "images/Brown.png", value: 40000000, demand: 10 },
-            { title: "Agility", status: "Common", image: "images/Agility.png", value: 4000, demand: 1 }
+            { title: "Yang", status: "Mythical", category: "scrolls", image: "images/Yang.png", value: 9000000, demand: 10 },
+            { title: "Wind", status: "Legendary", category: "scrolls", image: "images/Wind.png", value: 6500000, demand: 8.3 },
+            { title: "Samurai Mech", status: "Legendary", category: "scrolls", image: "images/Samurai Mech.png", value: 7000000, demand: 9.5 },
+            { title: "Green", status: "Legendary", category: "scrolls", image: "images/Green.png", value: 5000000, demand: 8 },
+            { title: "White Wolf", status: "Epic", category: "scrolls", image: "images/WhiteWolf.png", value: 3000000, demand: 7.8 },
+            { title: "Fire", status: "Epic", category: "scrolls", image: "images/Fire.png", value: 1000000, demand: 6.5 },
+            { title: "Lightning", status: "Epic", category: "scrolls", image: "images/Lightning.png", value: 950000, demand: 7 },
+            { title: "Ice", status: "Epic", category: "scrolls", image: "images/Ice.png", value: 850000, demand: 5.3 },
+            { title: "Earth", status: "Epic", category: "scrolls", image: "images/Earth.png", value: 700000, demand: 4 },
+            { title: "Hypnofang", status: "Rare", category: "scrolls", image: "images/HypnoFang.png", value: 100000, demand: 4.4 },
+            { title: "Acidfang", status: "Rare", category: "scrolls", image: "images/AcidFang.png", value: 10000, demand: 2 },
+            { title: "Strength", status: "Common", category: "scrolls", image: "images/Strength.png", value: 5000, demand: 1 },
+            { title: "Brown", status: "Epic", category: "scrolls", image: "images/Brown.png", value: 40000000, demand: 10 },
+            { title: "Agility", status: "Common", category: "scrolls", image: "images/Agility.png", value: 4000, demand: 1 },
+            // Add some dummy data for Accessories and Weapons
+            { title: "Sword of Destiny", status: "Legendary", category: "weapons", image: "images/Sword.png", value: 7500000, demand: 8.5 },
+            { title: "Ancient Shield", status: "Epic", category: "weapons", image: "images/Shield.png", value: 5000000, demand: 7.2 },
+            { title: "Ring of Power", status: "Epic", category: "accessories", image: "images/Ring.png", value: 4000000, demand: 6.8 },
+            { title: "Amulet of Protection", status: "Rare", category: "accessories", image: "images/Amulet.png", value: 2000000, demand: 5.9 }
         ];
 
         const statusOrder = {
@@ -159,15 +169,14 @@
             });
         }
 
-        function filterCards(filter) {
+        function filterCardsByCategory(category) {
             const cardContainer = document.getElementById('cardContainer');
             cardContainer.innerHTML = "";
 
-            cardsData.forEach(cardData => {
-                if (filter === "all" || cardData.status.toLowerCase() === filter) {
-                    const card = createCard(cardData);
-                    cardContainer.appendChild(card);
-                }
+            const filteredCards = cardsData.filter(card => card.category === category);
+            filteredCards.forEach(cardData => {
+                const card = createCard(cardData);
+                cardContainer.appendChild(card);
             });
         }
 
@@ -177,6 +186,14 @@
                 event.preventDefault();
                 const sortBy = link.dataset.sort;
                 sortCards(sortBy);
+            });
+        });
+
+        const tabButtons = document.querySelectorAll('.tab-button');
+        tabButtons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                const category = button.dataset.category;
+                filterCardsByCategory(category);
             });
         });
 
@@ -197,7 +214,7 @@
         });
 
         // Initial render
-        filterCards("all");
+        filterCardsByCategory("scrolls");
     </script>
 </body>
 </html>
