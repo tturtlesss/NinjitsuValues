@@ -405,6 +405,7 @@ a {
     }
 }
 
+
 /* Button Styles */
 .button, .back-button {
     background-color: #282a29;
@@ -424,8 +425,6 @@ a {
 .button:hover, .back-button:hover {
     background-color: #333534;
 }
-
-/* style.css - Part 4: FAQ, Guide, and Credits Styles */
 
 /* FAQ Styles */
 .faq-container {
