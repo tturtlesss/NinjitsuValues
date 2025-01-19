@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,9 @@
     <style>
         .tab-container {
             display: flex;
-            justify-content: center; /* Center the tabs */
-            margin: 20px auto; /* Add margin top and bottom, center horizontally */
-            max-width: 800px; /* Set a maximum width */
+            justify-content: center;
+            margin: 20px auto;
+            max-width: 800px;
             background-color: #1a1c1b;
             padding: 10px;
             border-radius: 8px;
@@ -25,7 +26,7 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease, color 0.3s ease;
-            margin: 0 5px; /* Add spacing between buttons */
+            margin: 0 5px;
         }
 
         .tab-button.active {
@@ -40,6 +41,7 @@
         }
     </style>
 </head>
+
 <body>
     <header class="site-header">
         <div class="header-content">
@@ -78,33 +80,34 @@
 
     <div class="tab-container">
         <button class="tab-button active" onclick="showContent('all')">All</button>
-        <button class="tab-button" onclick="showContent('scroll')">Scroll</button>
         <button class="tab-button" onclick="showContent('accessories')">Accessories</button>
+        <button class="tab-button" onclick="showContent('scroll')">Scroll</button>
         <button class="tab-button" onclick="showContent('weapons')">Weapons</button>
     </div>
 
     <div class="container" id="cardContainer"></div>
 
     <footer class="site-footer">
-        <div class="footer-content">
+        <div class="footer-container">
             <div class="footer-left">
-                <img src="images/BFV.png" alt="BFV Logo" class="footer-logo">
-                <p>Copyright © 2025 Blox Fruits Values</p>
+                <img src="images/Logo.png" alt="Site Logo" class="footer-logo">
+                <p>Copyright © 2025 Ninjitsu: Master of Elements Values</p>
             </div>
             <div class="footer-middle">
                 <h3>Disclaimer</h3>
-                <p>bloxfruitsvalues.com is a 3rd party website that is not affiliated or partnered with Blox Fruits.</p>
-                <p>We are not endorsed by Gamer Robot Inc.</p>
+                <p>ninjitsuvalues.com is a 3rd party website that is not affiliated or partnered with Ninjitsu: Master of Elements.</p>
             </div>
             <div class="footer-right">
                 <h3>Extra</h3>
-                <a href="#">Privacy Policy</a><br>
-                <a href="#">Terms of Service</a><br>
-                <a href="faq.html">FAQ</a>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
                 <div class="social-icons">
-                    <a href="#"><img src="images/discord.png" alt="Discord"></a>
-                    <a href="#"><img src="images/x.png" alt="X"></a>
-                    <a href="#"><img src="images/tiktok.png" alt="TikTok"></a>
+                    <a href="https://discord.gg/ninjitsu" target="_blank"><img src="images/DiscordLogo.png" alt="Discord"></a>
+                    <a href="https://twitter.com/ApexStudio267" target="_blank"><img src="images/Twitter.png" alt="X"></a>
+                    <a href="https://www.tiktok.com/@apexstudio3?_t=8jCNdOjs1a5&_r=1" target="_blank"><img src="images/Tiktok.png" alt="TikTok"></a>
                 </div>
             </div>
         </div>
@@ -125,7 +128,34 @@
             { title: "Acidfang", status: "Rare", image: "images/AcidFang.png", value: 10000, demand: 2, type: "accessories" },
             { title: "Strength", status: "Common", image: "images/Strength.png", value: 5000, demand: 1, type: "accessories" },
             { title: "Agility", status: "Common", image: "images/Agility.png", value: 4000, demand: 1, type: "accessories" },
-            { title: "Brown", status: "Epic", image: "images/Brown.png", value: 40000000, demand: 10, type: "weapons" }
+            { title: "Brown", status: "Epic", image: "images/Brown.png", value: 40000000, demand: 10, type: "weapons" },
+            { title: "Key of Rebirth", status: "Mythical", image: "images/KeyOfRebirth.png", value: 8500000, demand: 10, type: "weapons" },
+            { title: "Redsnake Cannon", status: "Legendary", image: "images/RedsnakeCannon.png", value: 5500000, demand: 7.5, type: "weapons" },
+            { title: "Acidfang Staff", status: "Legendary", image: "images/AcidfangStaff.png", value: 4500000, demand: 9.5, type: "weapons" },
+            { title: "Blackfang Executioner", status: "Legendary", image: "images/BlackfangExecutioner.png", value: 5000000, demand: 8.3, type: "weapons" },
+            { title: "Golden Nunchucks", status: "Legendary", image: "images/GoldenNunchucks.png", value: 6000000, demand: 9.4, type: "weapons" },
+            { title: "Golden Scythe", status: "Epic", image: "images/GoldenScythe.png", value: 3500000, demand: 8, type: "weapons" },
+            { title: "Rock Smashers", status: "Epic", image: "images/RockSmashers.png", value: 800000, demand: 6.5, type: "weapons" },
+            { title: "Acid Duelist", status: "Epic", image: "images/AcidDuelist.png", value: 740000, demand: 6, type: "weapons" },
+            { title: "Ground Slicer", status: "Rare", image: "images/GroundSlicer.png", value: 600000, demand: 5.7, type: "weapons" },
+            { title: "Skeleton Daggers", status: "Rare", image: "images/SkeletonDaggers.png", value: 500000, demand: 5, type: "weapons" },
+            { title: "Mech Cleaver", status: "Rare", image: "images/MechCleaver.png", value: 900000, demand: 7, type: "weapons" },
+            { title: "Redfang Daggers", status: "Rare", image: "images/RedfangDaggers.png", value: 990000, demand: 7.1, type: "weapons" },
+            { title: "Blackfang Daggers", status: "Rare", image: "images/BlackfangDaggers.png", value: 850000, demand: 6.9, type: "weapons" },
+            { title: "Greenfang Daggers", status: "Rare", image: "images/GreenfangDaggers.png", value: 780000, demand: 6.5, type: "weapons" },
+            { title: "Acidfang Spear", status: "Rare", image: "images/AcidfangSpear.png", value: 680000, demand: 5.5, type: "weapons" },
+            { title: "Enforcer", status: "Rare", image: "images/Enforcer.png", value: 855000, demand: 5.6, type: "weapons" },
+            { title: "Mech Katana", status: "Rare", image: "images/MechKatana.png", value: 830000, demand: 5.3, type: "weapons" },
+            { title: "Knuckles", status: "Rare", image: "images/Knuckles.png", value: 760000, demand: 6.1, type: "weapons" },
+            { title: "Axe", status: "Rare", image: "images/Axe.png", value: 690000, demand: 5.2, type: "weapons" },
+            { title: "Shurikens", status: "Common", image: "images/Shurikens.png", value: 250000, demand: 4.6, type: "weapons" },
+            { title: "Scythe", status: "Common", image: "images/Scythe.png", value: 350000, demand: 4, type: "weapons" },
+            { title: "Staff", status: "Common", image: "images/Staff.png", value: 280000, demand: 3.8, type: "weapons" },
+            { title: "Sword", status: "Common", image: "images/Sword.png", value: 50000, demand: 1.8, type: "weapons" },
+            { title: "Spear", status: "Common", image: "images/Spear.png", value: 10000, demand: 1.1, type: "weapons" },
+            { title: "Katana", status: "Common", image: "images/Katana.png", value: 1000, demand: 0.1, type: "weapons" },
+            { title: "Master Hu's Staff", status: "Mythical", image: "images/MasterHuStaff.png", value: 15000000, demand: 9.8, type: "weapons" },
+            { title: "Bat Sword", status: "Legendary", image: "images/BatSword.png", value: 5000000, demand: 6, type: "weapons" }
         ];
 
         const statusOrder = {
@@ -142,14 +172,14 @@
             card.innerHTML = `
                 <div class="card-top">
                     <h3 class="card-title">${cardData.title}</h3>
-                    <span class="card-status <span class="math-inline">\{cardData\.status\.toLowerCase\(\)\}"\></span>{cardData.status}</span>
+                    <span class="card-status ${cardData.status.toLowerCase()}">${cardData.status}</span>
                 </div>
                 <div class="card-image">
-                    <img src="<span class="math-inline">\{cardData\.image\}" alt\="</span>{cardData.title}">
+                    <img src="${cardData.image}" alt="${cardData.title}">
                 </div>
                 <div class="card-details">
                     <div class="detail-container">
-<span class="detail-label">Value</span>
+                        <span class="detail-label">Value</span>
                         <span class="detail-value">${cardData.value.toLocaleString()}</span>
                     </div>
                     <div class="detail-container">
@@ -230,12 +260,13 @@
             const cardContainer = document.getElementById('cardContainer');
             const filteredCards = [];
             cardsData.forEach(cardData => {
-                if (cardData.title.toLowerCase().includes(searchTerm) && (currentFilter === "all" || cardData.type === currentFilter)) {
+                if (cardData.title.toLower().includes(searchTerm) && (currentFilter === "all" || cardData.type === currentFilter)) {
                     filteredCards.push(cardData);
                 }
             });
+
             cardContainer.innerHTML = "";
-            filteredCards.forEach(cardData =>{
+            filteredCards.forEach(cardData => {
                 const card = createCard(cardData);
                 cardContainer.appendChild(card);
             });
