@@ -392,7 +392,7 @@ a {
 
 /* Button Styles */
 .button, .back-button {
-    background-color: #YOUR_BUTTON_COLOR; /* Replace with your actual color code */
+    background-color: #282a29; /* Green */
     border: none;
     color: white;
     padding: 10px 20px;
@@ -407,7 +407,7 @@ a {
 }
 
 .button:hover, .back-button:hover {
-    background-color: #YOUR_HOVER_COLOR; /* Replace with your actual hover color code */
+    background-color: #333534; /* Darker green on hover */
 }
 
 /* FAQ Styles */
