@@ -196,8 +196,6 @@ a {
 .tab-button.active {
     background-color: #444545;
 }
-
-/* Cards */
 .container {
     padding-top: 80px;
     display: flex;
@@ -206,6 +204,7 @@ a {
     max-width: 1200px;
     margin: 20px auto;
     padding: 0 20px;
+    min-width: 300px; /* Add minimum width */
 }
 
 .card {
@@ -219,12 +218,14 @@ a {
     flex-direction: column;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    max-width: 300px; /* Add fixed width */
 }
 
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
 }
+
 
 .card-top {
     display: flex;
