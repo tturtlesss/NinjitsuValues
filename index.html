@@ -137,14 +137,16 @@
             return card;
         }
 
-        function updateCards(cards) {
-            const cardContainer = document.getElementById('cardContainer');
-            cardContainer.innerHTML = "";
-            cards.forEach(cardData => {
-                const card = createCard(cardData);
-                cardContainer.appendChild(card);
-            });
-        }
+function updateCards(cards) {
+    const cardContainer = document.getElementById('cardContainer');
+    cardContainer.style.display = 'none'; // Hide container during update
+    cardContainer.innerHTML = "";
+    cards.forEach(cardData => {
+        const card = createCard(cardData);
+        cardContainer.appendChild(card);
+    });
+    cardContainer.style.display = 'flex'; // Show container after update
+}
 
         function filterCardsByCategory(category) {
             const filteredCards = cardsData.filter(card => card.category === category);
