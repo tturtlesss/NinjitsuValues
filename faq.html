@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FAQ</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .faq-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #1a1c1b;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .faq-container h1 {
+            color: #eee;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .faq-container h1::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50%;
+            height: 2px;
+            background-color: #eee;
+        }
+
+        .faq-section {
+            margin-bottom: 20px;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 15px;
+            background-color: #1a1c1b;
+            overflow: hidden;
+            transition: height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-section h2 {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #eee;
+            transition: transform 0.3s ease;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .faq-section .content {
+            padding-left: 20px;
+            color: #eee;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .faq-section.active .content {
+            opacity: 1;
+            transform: translateY(0);
+            padding-bottom: 10px;
+        }
+
+        .faq-section h2::after {
+            content: "+";
+            font-size: 1.5em;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-section.active h2::after {
+            content: "-";
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <div class="header-left">
+                <div class="logo-container">
+                    <a href="index.html"><img src="images/Logo.png" alt="Site Logo" class="logo"></a>
+                </div>
+            </div>
+            <div class="header-right">
+                <a href="index.html" class="back-button">Back</a>
+            </div>
+        </div>
+    </header>
+    <div class="faq-container">
+        <h1>FAQ</h1>
+
+        <div class="faq-section">
+            <h2>What is the difference between price and value?</h2>
+            <div class="content">
+                <p>N/A</p>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2>Why is there colored text on each value card?</h2>
+            <div class="content">
+                <p>The colored text on each value card represents the rarity of the item. Different colors correspond to different rarity tiers (e.g., Common, Rare, Epic, Legendary, Mythical).</p>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2>What impact does demand have on value and trading?</h2>
+            <div class="content">
+                <p>Demand plays a crucial role in determining an item's value in trading. High demand for a particular item can drive its value up, while low demand can lower it.</p>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2>Why do some scrolls/items have similar values but different demands?</h2>
+            <div class="content">
+                <p>Even if scrolls/items have similar base values, their demand can differ due to various factors such as in-game utility, aesthetic appeal, or popularity among players.</p>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2>I can't find a certain scroll/item on the website. What do I do?</h2>
+            <div class="content">
+                <p>If you can't find a certain scroll/item on the website, it might be a newly released item that hasn't been added yet, or it could be a less common item. You can try checking back later or contacting the website administrators to request its addition.</p>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2>How do I report a bug?</h2>
+            <div class="content">
+                <p>To report a bug, you can usually contact the website administrators through discord @tturtlesss. Be sure to provide as much detail as possible about the bug, including steps to reproduce it and any relevant screenshots.</p>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        const faqSections = document.querySelectorAll('.faq-section');
+        faqSections.forEach(section => {
+            const h2 = section.querySelector('h2');
+            h2.addEventListener('click', () => {
+                section.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

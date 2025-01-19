@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninjitsu Values</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-content">
+            <div class="header-left">
+                <div class="logo-container">
+                    <a href="index.html"><img src="images/Logo.png" alt="Site Logo" class="logo"></a>
+                </div>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search Item">
+                    <span class="search-icon">🔍</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="sort-dropdown">
+                    Sort By ▼
+                    <div class="sort-dropdown-content">
+                        <a href="#" data-sort="value-high-low">Value (High to Low)</a>
+                        <a href="#" data-sort="value-low-high">Value (Low to High)</a>
+                        <a href="#" data-sort="rarity-high-low">Rarity (High to Low)</a>
+                        <a href="#" data-sort="rarity-low-high">Rarity (Low to High)</a>
+                        <a href="#" data-sort="demand-high-low">Demand (High to Low)</a>
+                        <a href="#" data-sort="demand-low-high">Demand (Low to High)</a>
+                    </div>
+                </div>
+                <div class="info-dropdown">
+                    Information ▼
+                    <div class="info-dropdown-content">
+                        <a href="faq.html">FAQ</a>
+                        <a href="guide.html">Guide</a>
+                        <a href="credits.html">Credits</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container" id="cardContainer"></div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="images/Logo.png" alt="Site Logo" class="footer-logo">
+                <p>Copyright © 2025 Ninjitsu: Master of  Elements Values</p>
+            </div>
+            <div class="footer-middle">
+                <h3>Disclaimer</h3>
+                <p>ninjitsuvalues.com is a 3rd party website that is not affiliated or partnered with Ninjitsu: Master of Elements.</p>
+            </div>
+            <div class="footer-right">
+                <h3>Extra</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://discord.gg/ninjitsu" target="_blank"><img src="images/DiscordLogo.png" alt="Discord"></a>
+                    <a href="https://twitter.com/ApexStudio267" target="_blank"><img src="images/Twitter.png" alt="X"></a>
+                    <a href="https://www.tiktok.com/@apexstudio3?_t=8jCNdOjs1a5&_r=1" target="_blank"><img src="images/Tiktok.png" alt="TikTok"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const cardsData = [
+            { title: "Yang", status: "Mythical", image: "images/Yang.png", value: 9000000, demand: 10 },
+            { title: "Wind", status: "Legendary", image: "images/Wind.png", value: 6500000, demand: 8.3 },
+            { title: "Samurai Mech", status: "Legendary", image: "images/Samurai Mech.png", value: 7000000, demand: 9.5 },
+            { title: "Green", status: "Legendary", image: "images/Green.png", value: 5000000, demand: 8 },
+            { title: "White Wolf", status: "Rare", image: "images/WhiteWolf.png", value: 3000000, demand: 7.8 },
+            { title: "Fire", status: "Epic", image: "images/Fire.png", value: 1000000, demand: 6.5 },
+            { title: "Lightning", status: "Epic", image: "images/Lightning.png", value: 950000, demand: 7 },
+            { title: "Ice", status: "Epic", image: "images/Ice.png", value: 850000, demand: 5.3 },
+            { title: "Earth", status: "Epic", image: "images/Earth.png", value: 700000, demand: 4 },
+            { title: "Hypnofang", status: "Rare", image: "images/HypnoFang.png", value: 100000, demand: 4.4 },
+            { title: "Acidfang", status: "Rare", image: "images/AcidFang.png", value: 10000, demand: 2 },
+            { title: "Strength", status: "Common", image: "images/Strength.png", value: 5000, demand: 1 },
+            { title: "Agility", status: "Common", image: "images/Agility.png", value: 4000, demand: 1 }
+        ];
+
+        const statusOrder = {
+            "Mythical": 0,
+            "Legendary": 1,
+            "Epic": 2,
+            "Rare": 3,
+            "Common": 4
+        };
+
+        function createCard(cardData) {
+            const card = document.createElement("div");
+            card.classList.add("card");
+            card.innerHTML = `
+                <div class="card-top">
+                    <h3 class="card-title">${cardData.title}</h3>
+                    <span class="card-status ${cardData.status.toLowerCase()}">${cardData.status}</span>
+                </div>
+                <div class="card-image">
+                    <img src="${cardData.image}" alt="${cardData.title}">
+                </div>
+                <div class="card-details">
+                    <div class="detail-container">
+                        <span class="detail-label">Value</span>
+                        <span class="detail-value">${cardData.value.toLocaleString()}</span>
+                    </div>
+                    <div class="detail-container">
+                        <span class="detail-label">Demand</span>
+                        <span class="detail-value">${cardData.demand}/10</span>
+                    </div>
+                </div>
+            `;
+            return card;
+        }
+
+        function sortCards(sortBy) {
+            const cardContainer = document.getElementById('cardContainer');
+            cardContainer.innerHTML = "";
+
+            let sortedCards = [...cardsData];
+            switch (sortBy) {
+                case "value-high-low":
+                    sortedCards.sort((a, b) => b.value - a.value);
+                    break;
+                case "value-low-high":
+                    sortedCards.sort((a, b) => a.value - b.value);
+                    break;
+                case "rarity-high-low":
+                    sortedCards.sort((a, b) => statusOrder[a.status] - statusOrder[b.status]);
+                    break;
+                case "rarity-low-high":
+                    sortedCards.sort((a, b) => statusOrder[b.status] - statusOrder[a.status]);
+                    break;
+                case "demand-high-low":
+                    sortedCards.sort((a, b) => b.demand - a.demand);
+                    break;
+                case "demand-low-high":
+                    sortedCards.sort((a, b) => a.demand - b.demand);
+                    break;
+                default:
+                    break;
+            }
+
+            sortedCards.forEach(cardData => {
+                const card = createCard(cardData);
+                cardContainer.appendChild(card);
+            });
+        }
+
+        function filterCards(filter) {
+            const cardContainer = document.getElementById('cardContainer');
+            cardContainer.innerHTML = "";
+
+            cardsData.forEach(cardData => {
+                if (filter === "all" || cardData.status.toLowerCase() === filter) {
+                    const card = createCard(cardData);
+                    cardContainer.appendChild(card);
+                }
+            });
+        }
+
+        const sortLinks = document.querySelectorAll('.sort-dropdown-content a');
+        sortLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                const sortBy = link.dataset.sort;
+                sortCards(sortBy);
+            });
+        });
+
+        const searchInput = document.getElementById('searchInput');
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase();
+            const filteredCards = cardsData.filter(card =>
+                card.title.toLowerCase().includes(searchTerm)
+            );
+
+            const cardContainer = document.getElementById('cardContainer');
+            cardContainer.innerHTML = "";
+
+            filteredCards.forEach(cardData => {
+                const card = createCard(cardData);
+                cardContainer.appendChild(card);
+            });
+        });
+
+        // Initial render
+        filterCards("all");
+    </script>
+</body>
+</html>
