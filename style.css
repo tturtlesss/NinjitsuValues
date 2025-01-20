@@ -257,7 +257,7 @@ a {
 .card-status.rare { background-color: rgb(4, 39, 89); }
 
 .card-image {
-    width: 100%;
+    width: 80%;
     height: 100px; /* Ensure it scales proportionally */
     display: flex;
     align-items: center;
