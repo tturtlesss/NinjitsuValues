@@ -211,6 +211,7 @@ a {
     background-color: #1F2120;
     border-radius: 10px;
     padding: 15px 20px 20px;
+    margin: 10px;
     width: calc(25% - 20px); /* Adjust width for consistency */
     text-align: center;
     display: flex;
@@ -218,7 +219,6 @@ a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     max-width: 300px; /* Ensure a consistent max width */
-    flex-grow: 1; /* Ensure consistent growth */
 }
 
 
@@ -252,6 +252,7 @@ a {
 .card-status.legendary { background-color: rgb(212, 141, 15); }
 .card-status.epic { background-color: rgb(103, 4, 104); }
 .card-status.common { background-color: rgb(69, 34, 3); }
+.card-status.uncommon { background-color: rgb(0, 172, 0); }
 .card-status.rare { background-color: rgb(4, 39, 89); }
 
 .card-image {
