@@ -212,13 +212,13 @@ a {
     border-radius: 10px;
     padding: 15px 20px 20px;
     margin: 10px;
-    width: calc(25% - 20px);
+    width: calc(33.33% - 20px); /* Increase width */
     text-align: center;
     display: flex;
     flex-direction: column;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    max-width: 300px; /* Add fixed width */
+    max-width: 350px; /* Increase fixed width */
 }
 
 .card:hover {
@@ -256,15 +256,18 @@ a {
 
 .card-image {
     width: 100%;
-    height: auto; /* Ensure it scales proportionally */
+    max-height: 10px;
+    margin-bottom: 10px;
+    flex-grow: 1;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .card-image img {
     max-width: 100%;
-    height: auto; /* Maintain aspect ratio */
+    max-height: 100%;
     object-fit: contain;
     -webkit-user-drag: none;  /* Disable image drag */
 }
