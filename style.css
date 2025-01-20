@@ -202,7 +202,6 @@ a {
     flex-wrap: wrap;
     justify-content: space-around;
     max-width: 1200px;
-    margin: 20px auto;
     padding: 0 20px;
     min-width: 300px; 
     min-height: 500px; /* Set a minimum height to prevent auto-scaling */
@@ -274,11 +273,13 @@ a {
 
 
 .card-details {
+    padding: 10px 0; /* Add padding to top and bottom */
+    margin-top: auto; /* Pushes the card details to the bottom of the card */
     text-align: left;
     display: flex;
     flex-direction: column;
-    margin: 0;
 }
+
 
 .detail-container {
     margin-bottom: 5px;
