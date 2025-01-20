@@ -204,7 +204,7 @@ a {
     max-width: 1200px;
     margin: 20px auto;
     padding: 0 20px;
-    min-width: 300px; /* Add minimum width */
+    min-width: 300px; 
     min-height: 500px; /* Set a minimum height to prevent auto-scaling */
 }
 
@@ -226,7 +226,6 @@ a {
     transform: translateY(-5px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
 }
-
 
 .card-top {
     display: flex;
@@ -261,11 +260,12 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden; /* Ensures images don't overflow the container */
 }
 
 .card-image img {
     max-width: 100%;
-    max-height: 100%;
+    height: auto; /* Ensure the image scales proportionally */
     object-fit: contain;
     -webkit-user-drag: none;  /* Disable image drag */
 }
@@ -325,6 +325,7 @@ a {
     max-height: 50px;
     margin-bottom: 10px;
 }
+
 .footer-middle h3, .footer-right h3 {
     font-size: 16px;
     margin-bottom: 10px;
