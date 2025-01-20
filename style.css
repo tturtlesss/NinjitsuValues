@@ -267,7 +267,7 @@ a {
 
 .card-image img {
     max-width: 150%;
-    max-height: 150%;
+    height: auto;
     -webkit-user-drag: none;  /* Disable image drag */
 }
 
