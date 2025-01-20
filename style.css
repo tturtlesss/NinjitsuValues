@@ -212,13 +212,13 @@ a {
     border-radius: 10px;
     padding: 15px 20px 20px;
     margin: 10px;
-    width: calc(33.33% - 20px); /* Increase width */
+    width: calc(25% - 20px);
     text-align: center;
     display: flex;
     flex-direction: column;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    max-width: 350px; /* Increase fixed width */
+    max-width: 300px; /* Add fixed width */
 }
 
 .card:hover {
@@ -266,8 +266,8 @@ a {
 }
 
 .card-image img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 150%;
+    max-height: 150%;
     object-fit: contain;
     -webkit-user-drag: none;  /* Disable image drag */
 }
