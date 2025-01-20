@@ -219,6 +219,7 @@ a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     max-width: 300px; /* Ensure a consistent max width */
+    flex-grow: 1; /* Ensure consistent growth */
 }
 
 
@@ -232,6 +233,7 @@ a {
     justify-content: space-between;
     align-items: flex-start;
     margin: 0;
+    padding: 0;
 }
 
 .card-title {
