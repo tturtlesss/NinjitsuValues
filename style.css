@@ -210,7 +210,7 @@ a {
 .card {
     background-color: #1F2120;
     border-radius: 10px;
-    padding: 15px 20px 20px;
+    padding: 15px 20px;
     margin: 10px;
     width: calc(25% - 20px); /* Adjust width for consistency */
     text-align: center;
@@ -220,7 +220,6 @@ a {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     max-width: 300px; /* Ensure a consistent max width */
     flex-grow: 1; /* Ensure consistent growth */
-    min-height: 400px; /* Set a minimum height to prevent auto-scaling */
 }
 
 
