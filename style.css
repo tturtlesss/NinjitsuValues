@@ -258,7 +258,7 @@ a {
 
 .card-image {
     width: 100%;
-    height: auto; /* Ensure it scales proportionally */
+    height: 150px; /* Ensure it scales proportionally */
     display: flex;
     align-items: center;
     justify-content: center;
