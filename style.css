@@ -232,6 +232,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    margin: 0;
 }
 
 .card-title {
@@ -252,7 +253,7 @@ a {
 .card-status.legendary { background-color: rgb(212, 141, 15); }
 .card-status.epic { background-color: rgb(103, 4, 104); }
 .card-status.common { background-color: rgb(69, 34, 3); }
-.card-status.uncommon { background-color: rgb(0, 170, 9); }
+.card-status.uncommon { background-color: rgb(0, 170, 0); }
 .card-status.rare { background-color: rgb(4, 39, 89); }
 
 .card-image {
@@ -273,13 +274,11 @@ a {
 
 
 .card-details {
-    padding: 10px 0; /* Add padding to top and bottom */
-    margin-top: auto; /* Pushes the card details to the bottom of the card */
     text-align: left;
     display: flex;
     flex-direction: column;
+    margin: 0;
 }
-
 
 .detail-container {
     margin-bottom: 5px;
