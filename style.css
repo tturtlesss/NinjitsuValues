@@ -89,7 +89,7 @@ a {
 .search-container {
     display: flex;
     align-items: center;
-    background-color: #282a29;
+    background-color: #1a1c1b;
     border-radius: 20px;
     padding: 8px 15px;
     width: 300px;
@@ -111,7 +111,7 @@ a {
 }
 
 .search-icon {
-    color: #888;
+    color: #303030;
     font-size: 18px;
     margin-left: 5px;
 }
