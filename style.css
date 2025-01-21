@@ -89,7 +89,7 @@ a {
 .search-container {
     display: flex;
     align-items: center;
-    background-color: #1a1c1b;
+    background-color: #303332;
     border-radius: 20px;
     padding: 8px 15px;
     width: 300px;
@@ -120,7 +120,7 @@ a {
     background-color: #282a29;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 8px 10px;
     cursor: pointer;
     position: relative;
@@ -182,7 +182,7 @@ a {
     background-color: #282a29;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 10px 20px;
     margin: 0 10px;
     cursor: pointer;
