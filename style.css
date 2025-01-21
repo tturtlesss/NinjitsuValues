@@ -45,8 +45,7 @@ a {
     background-color: #555;  /* Hover color */
 }
 
-/* Enhanced Navigation Bar Styles */
-/* Enhanced Navigation Bar Styles */
+/* Header Styles */
 .site-header {
     background-color: #1a1c1b;
     width: 100%;
@@ -54,77 +53,67 @@ a {
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
 .header-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    height: 60px;
+    width: 100%;
+    justify-content: space-between;
 }
 
-.logo-container {
+.header-left {
     display: flex;
     align-items: center;
+    gap: 20px;
 }
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-container {}
 
 .logo {
     max-height: 40px;
     display: block;
 }
 
-.nav-items {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-/* Enhanced Search Container Styles */
 .search-container {
     display: flex;
     align-items: center;
-    background-color: #16171d;
-    border-radius: 12px;
+    background-color: #282a29;
+    border-radius: 20px;
     padding: 8px 15px;
     width: 300px;
-    position: relative;
-    box-shadow: 0 0 0 1.5px #2b2c37, 0 0 25px -17px #000;
-    transition: background-color 0.3s ease, box-shadow 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
 }
 
 .search-container:hover {
-    background-color: #2f303d;
-    box-shadow: 0 0 0 2.5px #2f303d, 0px 0px 25px -15px #000;
+    background-color: #333534;
 }
 
 .search-container input[type="text"] {
     background: transparent;
     border: none;
     outline: none;
-    color: #bdbecb;
+    color: #fff;
     font-size: 16px;
     flex-grow: 1;
-    padding-left: 2.5rem;
-}
-
-.search-container input[type="text"]::placeholder {
-    color: #bdbecb;
-}
-
-.search-container input[type="text"]:focus {
-    box-shadow: none;
 }
 
 .search-icon {
-    position: absolute;
-    left: 10px;
-    fill: #bdbecb;
-    width: 20px;
-    height: 20px;
-    pointer-events: none;
+    color: #888;
+    font-size: 18px;
+    margin-left: 5px;
 }
 
 .sort-dropdown, .info-dropdown {
@@ -181,7 +170,6 @@ a {
 .sort-dropdown-content a:hover, .info-dropdown-content a:hover {
     background-color: #333534;
 }
-
 
 /* Tab Styles */
 .tab-container {
