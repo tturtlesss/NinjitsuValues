@@ -49,6 +49,7 @@ a {
 .site-header {
     background-color: #1a1c1b;
     width: 100%;
+    position: sticky;
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
