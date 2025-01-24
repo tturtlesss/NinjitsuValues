@@ -82,63 +82,62 @@
 
     <!-- JavaScript -->
     <script>
-        const items = [
-        { title: "Yang", status: "Mythical", category: "scrolls", image: "images/Yang.png", value: 9000000, inGameValue: "100", demand: 10 },
-        { title: "Wind", status: "Legendary", category: "scrolls", image: "images/Wind.png", value: 6500000, inGameValue: "Example Value", demand: 8.3 },
-        { title: "Samurai Mech", status: "Legendary", category: "scrolls", image: "images/Samurai Mech.png", value: 7000000, inGameValue: "Example Value", demand: 9.5 },
-        { title: "Green", status: "Legendary", category: "scrolls", image: "images/Green.png", value: 5000000, inGameValue: "Example Value", demand: 8 },
-        { title: "White Wolf", status: "Epic", category: "scrolls", image: "images/WhiteWolf.png", value: 3000000, inGameValue: "Example Value", demand: 7.8 },
-        { title: "Fire", status: "Epic", category: "scrolls", image: "images/Fire.png", value: 1000000, inGameValue: "Example Value", demand: 6.5 },
-        { title: "Lightning", status: "Epic", category: "scrolls", image: "images/Lightning.png", value: 950000, inGameValue: "Example Value", demand: 7 },
-        { title: "Ice", status: "Epic", category: "scrolls", image: "images/Ice.png", value: 850000, inGameValue: "Example Value", demand: 5.3 },
-        { title: "Earth", status: "Epic", category: "scrolls", image: "images/Earth.png", value: 700000, inGameValue: "Example Value", demand: 4 },
-        { title: "Hypnofang", status: "Rare", category: "scrolls", image: "images/HypnoFang.png", value: 100000, inGameValue: "Example Value", demand: 4.4 },
-        { title: "Acidfang", status: "Rare", category: "scrolls", image: "images/AcidFang.png", value: 10000, inGameValue: "Example Value", demand: 2 },
-        { title: "Strength", status: "Common", category: "scrolls", image: "images/Strength.png", value: 5000, inGameValue: "Example Value", demand: 1 },
-        { title: "Brown", status: "Epic", category: "scrolls", image: "images/Brown.png", value: 40000000, inGameValue: "Example Value", demand: 10 },
-        { title: "Agility", status: "Common", category: "scrolls", image: "images/Agility.png", value: 4000, inGameValue: "Example Value", demand: 1 },
-        { title: "Key of Rebirth", status: "Legendary", category: "weapons", image: "images/KOR.png", value: 8500000, inGameValue: "Example Value", demand: 10 },
-        { title: "Redsnake Cannon", status: "Legendary", category: "weapons", image: "images/Cannon.png", value: 5500000, inGameValue: "Example Value", demand: 7.5 },
-        { title: "Acidfang Staff", status: "Legendary", category: "weapons", image: "images/Staff.png", value: 4500000, inGameValue: "Example Value", demand: 9.5 },
-        { title: "Blackfang Executioner", status: "Legendary", category: "weapons", image: "images/Executioner.png", value: 5000000, inGameValue: "Example Value", demand: 8.3 },
-        { title: "Golden Nunchucks", status: "Legendary", category: "weapons", image: "images/Nunchucks.png", value: 6000000, inGameValue: "Example Value", demand: 9.4 },
-        { title: "Golden Scythe", status: "Legendary", category: "weapons", image: "images/Scythe.png", value: 3500000, inGameValue: "Example Value", demand: 8 },
-        { title: "Rock Smashers", status: "Epic", category: "weapons", image: "images/Smashers.png", value: 800000, inGameValue: "Example Value", demand: 6.5 },
-        { title: "Acid Duelist", status: "Epic", category: "weapons", image: "images/Duelist.png", value: 740000, inGameValue: "Example Value", demand: 6 },
-        { title: "Ground Slicer", status: "Epic", category: "weapons", image: "images/Slicer.png", value: 600000, inGameValue: "Example Value", demand: 5.7 },
-        { title: "Skeleton Daggers", status: "Epic", category: "weapons", image: "images/Daggers.png", value: 500000, inGameValue: "Example Value", demand: 5 },
-        { title: "Mech Cleaver", status: "Rare", category: "weapons", image: "images/Cleaver.png", value: 900000, inGameValue: "Example Value", demand: 7 },
-        { title: "Redfang Daggers", status: "Rare", category: "weapons", image: "images/RedDaggers.png", value: 990000, inGameValue: "Example Value", demand: 7.1 },
-        { title: "Blackfang Daggers", status: "Rare", category: "weapons", image: "images/BlackDaggers.png", value: 850000, inGameValue: "Example Value", demand: 6.9 },
-        { title: "Greenfang Daggers", status: "Rare", category: "weapons", image: "images/GreenDaggers.png", value: 780000, inGameValue: "Example Value", demand: 6.5 },
-        { title: "Acidfang Spear", status: "Rare", category: "weapons", image: "images/Spear.png", value: 680000, inGameValue: "Example Value", demand: 5.5 },
-        { title: "Enforcer", status: "Uncommon", category: "weapons", image: "images/Enforcer.png", value: 855000, inGameValue: "Example Value", demand: 5.6 },
-        { title: "Mech Katana", status: "Uncommon", category: "weapons", image: "images/Katana.png", value: 830000, inGameValue: "Example Value", demand: 5.3 },
-        { title: "Knuckles", status: "Uncommon", category: "weapons", image: "images/Knuckles.png", value: 760000, inGameValue: "Example Value", demand: 6.1 },
-        { title: "Axe", status: "Uncommon", category: "weapons", image: "images/Axe.png", value: 690000, inGameValue: "Example Value", demand: 5.2 },
-        { title: "Shurikens", status: "Uncommon", category: "weapons", image: "images/Shurikens.png", value: 250000, inGameValue: "Example Value", demand: 4.6 },
-        { title: "Scythe", status: "Common", category: "weapons", image: "images/Scythe2.png", value: 350000, inGameValue: "Example Value", demand: 4 },
-        { title: "Staff", status: "Common", category: "weapons", image: "images/Staff2.png", value: 280000, inGameValue: "Example Value", demand: 3.8 },
-        { title: "Sword", status: "Common", category: "weapons", image: "images/Sword2.png", value: 50000, inGameValue: "Example Value", demand: 1.8 },
-        { title: "Spear", status: "Common", category: "weapons", image: "images/Spear2.png", value: 10000, inGameValue: "Example Value", demand: 1.1 },
-        { title: "Katana", status: "Common", category: "weapons", image: "images/Katana2.png", value: 1000, inGameValue: "Example Value", demand: 0.1 },
-        { title: "Master Hu's Staff", status: "Epic", category: "weapons", image: "images/MasterHuStaff.png", value: 15000000, inGameValue: "Example Value", demand: 9.8 },
-        { title: "Bat Sword", status: "Epic", category: "weapons", image: "images/BatSword.png", value: 5000000, inGameValue: "Example Value", demand: 6 },
-        { title: "Hazmat Boots", status: "Uncommon", category: "accessories", image: "images/HazmatBoots.png", value: 50000, inGameValue: "Example Value", demand: 2.5 },
-        { title: "Black Cape", status: "Epic", category: "accessories", image: "images/BlackCape.png", value: 600000, inGameValue: "Example Value", demand: 6 },
-        { title: "Bamboo Hat", status: "Rare", category: "accessories", image: "images/BambooHat.png", value: 460000, inGameValue: "Example Value", demand: 5.7 },
-        { title: "Champions Belt", status: "Rare", category: "accessories", image: "images/ChampionsBelt.png", value: 680000, inGameValue: "Example Value", demand: 5.9 },
-        { title: "Phantom Shooter", status: "Epic", category: "accessories", image: "images/PhantomShooter.png", value: 1000000, inGameValue: "Example Value", demand: 8.1 },
-        { title: "Glasses of Speed", status: "Legendary", category: "accessories", image: "images/GlassesofSpeed.png", value: 17000000, inGameValue: "Example Value", demand: 10 },
-        { title: "Ghost Hood", status: "Legendary", category: "accessories", image: "images/GhostHood.png", value: 1700000, inGameValue: "Example Value", demand: 8.5 },
-        { title: "Frozen Spirit Serpent", status: "Legendary", category: "accessories", image: "images/FrozenSpiritSerpent.png", value: 25000000, inGameValue: "Example Value", demand: 10 },
-        { title: "Emerald Shadow Serpent", status: "Legendary", category: "accessories", image: "images/EmeraldShadowSerpent.png", value: 30000000, inGameValue: "Example Value", demand: 10 },
-        { title: "Golden Glasses of Speed", status: "Mythical", category: "accessories", image: "images/GoldenGlassesofSpeed.png", value: 43000000, inGameValue: "Example Value", demand: 10 },
-        { title: "Pumpkin Helmet", status: "Epic", category: "accessories", image: "images/PumpkinHelmet.png", value: 5000000, inGameValue: "Example Value", demand: 7.3 },
-        { title: "Ghost", status: "Legendary", category: "accessories", image: "images/Ghost.png", value: 9000000, inGameValue: "Example Value", demand: 8.9 },
-        { title: "Shadow Gem", status: "Legendary", category: "accessories", image: "images/ShadowGem.png", value: 55000000, inGameValue: "Example Value", demand: 10 }
+        const cardsData = [
+            { title: "Yang", status: "Mythical", category: "scrolls", image: "images/Yang.png", value: 9000000, demand: 10 },
+            { title: "Wind", status: "Legendary", category: "scrolls", image: "images/Wind.png", value: 6500000, demand: 8.3 },
+            { title: "Samurai Mech", status: "Legendary", category: "scrolls", image: "images/Samurai Mech.png", value: 7000000, demand: 9.5 },
+            { title: "Green", status: "Legendary", category: "scrolls", image: "images/Green.png", value: 5000000, demand: 8 },
+            { title: "White Wolf", status: "Epic", category: "scrolls", image: "images/WhiteWolf.png", value: 3000000, demand: 7.8 },
+            { title: "Fire", status: "Epic", category: "scrolls", image: "images/Fire.png", value: 1000000, demand: 6.5 },
+            { title: "Lightning", status: "Epic", category: "scrolls", image: "images/Lightning.png", value: 950000, demand: 7 },
+            { title: "Ice", status: "Epic", category: "scrolls", image: "images/Ice.png", value: 850000, demand: 5.3 },
+            { title: "Earth", status: "Epic", category: "scrolls", image: "images/Earth.png", value: 700000, demand: 4 },
+            { title: "Hypnofang", status: "Rare", category: "scrolls", image: "images/HypnoFang.png", value: 100000, demand: 4.4 },
+            { title: "Acidfang", status: "Rare", category: "scrolls", image: "images/AcidFang.png", value: 10000, demand: 2 },
+            { title: "Strength", status: "Common", category: "scrolls", image: "images/Strength.png", value: 5000, demand: 1 },
+            { title: "Brown", status: "Epic", category: "scrolls", image: "images/Brown.png", value: 40000000, demand: 10 },
+            { title: "Agility", status: "Common", category: "scrolls", image: "images/Agility.png", value: 4000, demand: 1 },
+            { title: "Key of Rebirth", status: "Legendary", category: "weapons", image: "images/KOR.png", value: 8500000, demand: 10 },
+            { title: "Redsnake Cannon", status: "Legendary", category: "weapons", image: "images/Cannon.png", value: 5500000, demand: 7.5 },
+            { title: "Acidfang Staff", status: "Legendary", category: "weapons", image: "images/Staff.png", value: 4500000, demand: 9.5 },
+            { title: "Blackfang Exeuctioner", status: "Legendary", category: "weapons", image: "images/Executioner.png", value: 5000000, demand: 8.3 },
+            { title: "Golden Nunchucks", status: "Legendary", category: "weapons", image: "images/Nunchucks.png", value: 6000000, demand: 9.4 },
+            { title: "Golden Scythe", status: "Legendary", category: "weapons", image: "images/Scythe.png", value: 3500000, demand: 8 },
+            { title: "Rock Smashers", status: "Epic", category: "weapons", image: "images/Smashers.png", value: 800000, demand: 6.5 },
+            { title: "Acid Duelist", status: "Epic", category: "weapons", image: "images/Duelist.png", value: 740000, demand: 6 },
+            { title: "Ground Slicer", status: "Epic", category: "weapons", image: "images/Slicer.png", value: 600000, demand: 5.7 },
+            { title: "Skeleton Daggers", status: "Epic", category: "weapons", image: "images/Daggers.png", value: 500000, demand: 5 },
+            { title: "Mech Cleaver", status: "Rare", category: "weapons", image: "images/Cleaver.png", value: 900000, demand: 7 },
+            { title: "Redfang Daggers", status: "Rare", category: "weapons", image: "images/RedDaggers.png", value: 990000, demand: 7.1 },
+            { title: "Blackfang Daggers", status: "Rare", category: "weapons", image: "images/BlackDaggers.png", value: 850000, demand: 6.9 },
+            { title: "Greenfang Daggers", status: "Rare", category: "weapons", image: "images/GreenDaggers.png", value: 780000, demand: 6.5 },
+            { title: "Acidfang Spear", status: "Rare", category: "weapons", image: "images/Spear.png", value: 680000, demand: 5.5 },
+            { title: "Enforcer", status: "Uncommon", category: "weapons", image: "images/Enforcer.png", value: 855000, demand: 5.6 },
+            { title: "Mech Katana", status: "Uncommon", category: "weapons", image: "images/Katana.png", value: 830000, demand: 5.3 },
+            { title: "Knuckles", status: "Uncommon", category: "weapons", image: "images/Knuckles.png", value: 760000, demand: 6.1 },
+            { title: "Axe", status: "Uncommon", category: "weapons", image: "images/Axe.png", value: 690000, demand: 5.2 },
+            { title: "Shurikens", status: "Uncommon", category: "weapons", image: "images/Shurikens.png", value: 250000, demand: 4.6 },
+            { title: "Scythe", status: "Common", category: "weapons", image: "images/Scythe2.png", value: 350000, demand: 4 },
+            { title: "Staff", status: "Common", category: "weapons", image: "images/Staff2.png", value: 280000, demand: 3.8 },
+            { title: "Sword", status: "Common", category: "weapons", image: "images/Sword2.png", value: 50000, demand: 1.8 },
+            { title: "Spear", status: "Common", category: "weapons", image: "images/Spear2.png", value: 10000, demand: 1.1 },
+            { title: "Katana", status: "Common", category: "weapons", image: "images/Katana2.png", value: 1000, demand: 0.1 },
+            { title: "Master Hu's Staff", status: "Epic", category: "weapons", image: "images/MasterHuStaff.png", value: 15000000, demand: 9.8 },
+            { title: "Bat Sword", status: "Epic", category: "weapons", image: "images/BatSword.png", value: 5000000, demand: 6 },
+            { title: "Hazmat Boots", status: "Uncommon", category: "accessories", image: "images/HazmatBoots.png", value: 50000, demand: 2.5 },
+            { title: "Black Cape", status: "Epic", category: "accessories", image: "images/BlackCape.png", value: 600000, demand: 6 },
+            { title: "Bamboo Hat", status: "Rare", category: "accessories", image: "images/BambooHat.png", value: 460000, demand: 5.7 },
+            { title: "Champions Belt", status: "Rare", category: "accessories", image: "images/ChampionsBelt.png", value: 680000, demand: 5.9 },
+            { title: "Phantom Shooter", status: "Epic", category: "accessories", image: "images/PhantomShooter.png", value: 1000000, demand: 8.1 },
+            { title: "Glasses of Speed", status: "Legendary", category: "accessories", image: "images/GlassesofSpeed.png", value: 17000000, demand: 10 },
+            { title: "Ghost Hood", status: "Legendary", category: "accessories", image: "images/GhostHood.png", value: 1700000, demand: 8.5 },
+            { title: "Frozen Spirit Serpent", status: "Legendary", category: "accessories", image: "images/FrozenSpiritSerpent.png", value: 25000000, demand: 10 },
+            { title: "Emerald Shadow Serpent", status: "Legendary", category: "accessories", image: "images/EmeraldShadowSerpent.png", value: 30000000, demand: 10 },
+            { title: "Golden Glasses of Speed", status: "Mythical", category: "accessories", image: "images/GoldenGlassesofSpeed.png", value: 43000000, demand: 10 },
+            { title: "Pumpkin Helmet", status: "Epic", category: "accessories", image: "images/PumpkinHelmet.png", value: 5000000, demand: 7.3 },
+            { title: "Ghost", status: "Legendary", category: "accessories", image: "images/Ghost.png", value: 9000000, demand: 8.9 },
+            { title: "Shadow Gem", status: "Legendary", category: "accessories", image: "images/ShadowGem.png", value: 55000000, demand: 10 }
         ];
-    
 
         const statusOrder = {
             "Mythical": 0,
@@ -150,34 +149,29 @@
         };
 
         function createCard(cardData) {
-    const card = document.createElement("div");
-    card.classList.add("card");
-    card.innerHTML = `
-        <div class="card-top">
-            <h3 class="card-title">${cardData.title}</h3>
-            <span class="card-status ${cardData.status.toLowerCase()}">${cardData.status}</span>
-        </div>
-        <div class="card-image">
-            <img src="${cardData.image}" alt="${cardData.title}">
-        </div>
-        <div class="card-details">
-            <div class="detail-container">
-                <span class="detail-label">Value</span>
-                <span class="detail-value">${cardData.value.toLocaleString()}</span>
-            </div>
-            <div class="detail-container">
-                <span class="detail-label">In-Game Values</span>
-                <span class="detail-value">${cardData.inGameValue || 'N/A'}</span>
-            </div>
-            <div class="detail-container">
-                <span class="detail-label">Demand</span>
-                <span class="detail-value">${cardData.demand}/10</span>
-            </div>
-        </div>
-    `;
-    return card;
-}
-
+            const card = document.createElement("div");
+            card.classList.add("card");
+            card.innerHTML = `
+                <div class="card-top">
+                    <h3 class="card-title">${cardData.title}</h3>
+                    <span class="card-status ${cardData.status.toLowerCase()}">${cardData.status}</span>
+                </div>
+                <div class="card-image">
+                    <img src="${cardData.image}" alt="${cardData.title}">
+                </div>
+                <div class="card-details">
+                    <div class="detail-container">
+                        <span class="detail-label">Value</span>
+                        <span class="detail-value">${cardData.value.toLocaleString()}</span>
+                    </div>
+                    <div class="detail-container">
+                        <span class="detail-label">Demand</span>
+                        <span class="detail-value">${cardData.demand}/10</span>
+                    </div>
+                </div>
+            `;
+            return card;
+        }
 
 function updateCards(cards) {
     const cardContainer = document.getElementById('cardContainer');
